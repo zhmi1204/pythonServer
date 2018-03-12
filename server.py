@@ -34,7 +34,7 @@ def udpServer():
         data,addr=udpsock.recvfrom(buffer)
         udpsock.sendto('[%s]%s' %(ctime(),data),addr)
         print '...received from and retuned to:',addr
-    udpsock.close()
+        udpsock.close()
 
 if __name__=="main":
     udpServer()
