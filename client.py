@@ -25,9 +25,11 @@
 #python2
 import socket
 
-address = ('47.95.233.40',80)
+address = ('47.95.233.40',180)
+# address = ('106.39.0.94',180)
 # address = ('127.0.0.1',10372)
 udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+# udpClientSocket.bind(address)
 while True:
     data = raw_input("input >>> ")
     if not data:
