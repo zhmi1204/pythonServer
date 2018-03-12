@@ -1,20 +1,40 @@
-from socket import *
+# python3
+# from socket import *
+#
+# # PC端公网IP为106.39.0.94
+# host = '47.95.233.40'
+# port =12345
+# bufsize = 1024
+#
+# addr = (host,port)
+# udpClient = socket(AF_INET,SOCK_DGRAM)
+#
+# while True:
+#     data = input('>>>')
+#     if not data:
+#         break
+#     data = data.encode(encoding="utf-8")
+#     udpClient.sendto(data,addr)
+#     data.addr = udpClient.recvfrom(bufsize)
+#     print(data.decode(encoding="utf-8"),'from',addr)
+#
+# udpClient.close()
 
-# PC端公网IP为106.39.0.94
-host = '192.168.1.1'
-port =12345
-bufsize = 1024
+#python2
+import socket
+def udpClient():
+    host = '47.95.233.40'
+    port = 8080
+    address = (host,port)
+    udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+    while True:
+        data = raw_input()
+        if not data:
+            break
+        udpClientSocket.sendto(data,address)
+        data,address = udpClientSocket.recvfrom(2048)
+        print data
+        udpClientSocket.close()
 
-addr = (host,port)
-udpClient = socket(AF_INET,SOCK_DGRAM)
-
-while True:
-    data = input('>>>')
-    if not data:
-        break
-    data = data.encode(encoding="utf-8")
-    udpClient.sendto(data,addr)
-    data.addr = udpClient.recvfrom(bufsize)
-    print(data.decode(encoding="utf-8"),'from',addr)
-
-udpClient.close()
+if __name__ == "__main__":
+    udpClient()
