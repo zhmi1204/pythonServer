@@ -1,3 +1,4 @@
+#coding:utf8
 # python3
 # from socket import *
 #
@@ -11,30 +12,26 @@
 #
 # while True:
 #     data = input('>>>')
-#     if not data:
-#         break
+#     # if not data:
+#     #     break
 #     data = data.encode(encoding="utf-8")
 #     udpClient.sendto(data,addr)
 #     data.addr = udpClient.recvfrom(bufsize)
 #     print(data.decode(encoding="utf-8"),'from',addr)
+#     # print(data,addr)
 #
 # udpClient.close()
 
 #python2
 import socket
-def udpClient():
-    host = '47.95.233.40'
-    port = 8080
-    address = (host,port)
-    udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
-    while True:
-        data = raw_input()
-        if not data:
-            break
-        udpClientSocket.sendto(data,address)
-        data,address = udpClientSocket.recvfrom(2048)
-        print data
-        udpClientSocket.close()
 
-if __name__ == "__main__":
-    udpClient()
+address = ('47.95.233.40',8080)
+udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+while True:
+    data = raw_input("input >>> ")
+    if not data:
+        break
+    udpClientSocket.sendto(data,address)
+    data,address = udpClientSocket.recvfrom(2048)
+    print 'received data ----- '+ data +' ----- from and retuned to addr ----- ',address
+udpClientSocket.close()
