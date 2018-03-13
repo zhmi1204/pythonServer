@@ -26,7 +26,7 @@ import socket
 from time import ctime
 
 buffer=2048
-address=('47.95.233.40',80)
+address=('localhost',8888)
 udpsock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 udpsock.bind(address)
 while True:
