@@ -29,6 +29,7 @@ buffer=2048
 address=('localhost',8888)
 udpsock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 udpsock.bind(address)
+udpsock.listen(5)
 while True:
     print 'waiting for message...'
     data,addr=udpsock.recvfrom(buffer)
