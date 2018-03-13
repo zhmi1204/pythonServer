@@ -26,7 +26,7 @@ import socket
 from time import ctime
 
 buffer=2048
-address=('127.0.0.1',8888)
+address=('127.0.0.1',80)
 udpServerSock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 # udpsock.listen(5)
 udpServerSock.bind(address)
