@@ -20,12 +20,12 @@
 #     print(data.decode(encoding="utf-8"),'from',addr)
 #     # print(data,addr)
 #
-# udpClient.close()
+# udpClient.clos
 
 #python2
 import socket
 
-address = ('47.95.233.40',8888)
+address = ('127.0.0.1',8888)
 # address = ('172.16.252.50',180)
 # address = ('106.39.0.94',180)
 # address = ('127.0.0.1',10372)
@@ -37,5 +37,5 @@ while True:
         break
     udpClientSocket.sendto(data,address)
     data,address = udpClientSocket.recvfrom(2048)
-    print 'received data ----- '+ data +' ----- from and retuned to addr ----- ',address
+    print 'received data '+ data +' from and retuned to addr ',address
 udpClientSocket.close()

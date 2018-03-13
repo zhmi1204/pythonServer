@@ -26,13 +26,13 @@ import socket
 from time import ctime
 
 buffer=2048
-address=('localhost',8888)
+address=('127.0.0.1',8888)
 udpsock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+# udpsock.listen(5)
 udpsock.bind(address)
-udpsock.listen(5)
 while True:
     print 'waiting for message...'
     data,addr=udpsock.recvfrom(buffer)
     udpsock.sendto('[%s]%s' %(ctime(),data),addr)
-    print 'received data ----- '+ data +' ----- from and retuned to addr ----- ',addr
+    print 'received data '+ data +' from and retuned ',addr
 udpsock.close()
