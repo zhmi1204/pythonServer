@@ -4,8 +4,8 @@ from time import ctime
 import time
 import threading
 import sys
-
-address=('127.0.0.1',50583)
+#3471/udp
+address=('127.0.0.1',3471)
 udpServerSock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 udpServerSock.bind(address)
 
