@@ -7,7 +7,8 @@ import socket
 # address = ('47.95.233.40',31204)
 # address = ('172.16.252.50',180)
 # address = ('106.39.0.94',180)
-address = ('127.0.0.1',50000)
+# address = ('127.0.0.1',50000)
+address = ('47.95.233.40',50583)
 udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 # udpClientSocket.bind(address)
 while True:
