@@ -18,6 +18,7 @@ udpServerSock.bind(address)
 while True:
     print 'waiting for message'
     data,addr=udpServerSock.recvfrom(2018)
+    print("Got message!waiting for re-send!")
     if not data:
         break
     # udpServerSock.sendto('[%s]%s' %(ctime(),data),addr)
