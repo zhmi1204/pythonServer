@@ -9,7 +9,8 @@ import socket
 # address = ('106.39.0.94',180)
 # address = ('127.0.0.1',50000)
 #3471/udp
-address = ('47.95.233.40',3471)
+# address = ('47.95.233.40',3471)
+address = ('47.104.188.40',3471)
 udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 # udpClientSocket.bind(address)
 while True:
@@ -17,6 +18,7 @@ while True:
     if not data:
         break
     udpClientSocket.sendto(data,address)
+    print("Client has sent message!waiting for return!")
     data,address = udpClientSocket.recvfrom(2048)
     print 'received '+ data +' from ',address
 udpClientSocket.close()
