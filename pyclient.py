@@ -1,5 +1,7 @@
 # coding=utf-8
 
+#python2
+
 import socket
 
 s = socket.socket()  # 生成一个socket对象

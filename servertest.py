@@ -1,5 +1,7 @@
 #coding:utf8
 
+#python3
+
 import socketserver
 class My_server(socketserver.BaseRequestHandler):
 	def handle(self):
