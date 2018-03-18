@@ -1,8 +1,9 @@
 # coding=utf-8
 
+#python2
+
 from SocketServer import TCPServer, ForkingMixIn, StreamRequestHandler
 import time
-
 
 class Server(ForkingMixIn, TCPServer):  # 自定义Server类
     pass
