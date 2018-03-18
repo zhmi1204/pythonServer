@@ -2,7 +2,7 @@
 # python2 server
 import socket
 
-address=('127.0.0.1',3471)
+address=('0.0.0.0',3471)
 udpServerSock=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 #server关闭后清除port占用
 udpServerSock.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
