@@ -2,7 +2,7 @@
 #python2 client
 import socket
 
-address = ('127.0.0.1',3471)
+address = ('47.104.188.27',3471)
 #创建UDP套接字
 udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 #关闭后清除端口占用
