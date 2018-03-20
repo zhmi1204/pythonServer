@@ -9,11 +9,13 @@ udpClientSocket = socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
 udpClientSocket.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
 
 while True:
-    data = raw_input("input >>> ")
+    data = input("input >>> ")
     if not data:
         break
+    data = data.encode('utf-8')
     udpClientSocket.sendto(data,address)
-    print 'Client has sent message!waiting for return!"'
+    print('Client has sent message!waiting for return!"')
     data,address = udpClientSocket.recvfrom(2048)
-    print 'received '+ data +' from ',address
+    data = data.decode('utf-8')
+    print('received '+ data +' from ',address)
 udpClientSocket.close()
