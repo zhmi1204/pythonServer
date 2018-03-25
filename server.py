@@ -1,5 +1,5 @@
 #coding:utf8
-# python2 server
+# python3 server
 import socket
 
 address=('0.0.0.0',3471)
