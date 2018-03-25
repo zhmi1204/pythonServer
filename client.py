@@ -1,5 +1,5 @@
 #coding:utf8
-#python2 client
+#python3 client
 import socket
 
 address = ('47.104.188.27',3471)
